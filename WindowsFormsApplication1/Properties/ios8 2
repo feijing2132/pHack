@@ -1,0 +1,302 @@
+UIKit`UIApplicationMain:
+    0x10df58f1e <+0>:    pushq  %rbp
+    0x10df58f1f <+1>:    movq   %rsp, %rbp
+    0x10df58f22 <+4>:    pushq  %r15
+    0x10df58f24 <+6>:    pushq  %r14
+    0x10df58f26 <+8>:    pushq  %r13
+    0x10df58f28 <+10>:   pushq  %r12
+    0x10df58f2a <+12>:   pushq  %rbx
+    0x10df58f2b <+13>:   subq   $0x38, %rsp
+    0x10df58f2f <+17>:   movq   %rcx, -0x48(%rbp)
+    0x10df58f33 <+21>:   movq   %rdx, %r15
+    0x10df58f36 <+24>:   movq   %rsi, %rbx
+    0x10df58f39 <+27>:   movl   %edi, %r13d
+    0x10df58f3c <+30>:   movq   0xb4ca8d(%rip), %rax      ; (void *)0x00000001101d2070: __stack_chk_guard
+    0x10df58f43 <+37>:   movq   (%rax), %rax
+    0x10df58f46 <+40>:   movq   %rax, -0x30(%rbp)
+    0x10df58f4a <+44>:   leaq   0xdf66bb(%rip), %r14      ; _UIApplicationLinkedOnVersion
+    0x10df58f51 <+51>:   movl   (%r14), %ecx
+    0x10df58f54 <+54>:   testl  %ecx, %ecx
+    0x10df58f56 <+56>:   jne    0x10df58f7a               ; <+92>
+    0x10df58f58 <+58>:   xorl   %eax, %eax
+    0x10df58f5a <+60>:   cmpq   $-0x1, 0xdf05ee(%rip)     ; WebKitSetIsClassic + 7
+    0x10df58f62 <+68>:   je     0x10df58fa9               ; <+139>
+    0x10df58f64 <+70>:   leaq   0xdf05e5(%rip), %rdi      ; _UIApplicationLinkedOnVersionOnce
+    0x10df58f6b <+77>:   leaq   0xb4fcfe(%rip), %rsi      ; __block_literal_global1030
+    0x10df58f72 <+84>:   callq  0x10e72b9e4               ; symbol stub for: dispatch_once
+    0x10df58f77 <+89>:   movl   (%r14), %ecx
+    0x10df58f7a <+92>:   xorl   %eax, %eax
+    0x10df58f7c <+94>:   cmpl   $0x20100, %ecx
+    0x10df58f82 <+100>:  jb     0x10df58fa9               ; <+139>
+    0x10df58f84 <+102>:  movq   0xdb8e15(%rip), %rdi      ; (void *)0x000000010d6b9da8: NSAutoreleasePool
+    0x10df58f8b <+109>:  movq   0xd8d406(%rip), %rsi      ; "alloc"
+    0x10df58f92 <+116>:  movq   0xb4d0f7(%rip), %r14      ; (void *)0x000000010d81f000: objc_msgSend
+    0x10df58f99 <+123>:  callq  *%r14
+    0x10df58f9c <+126>:  movq   0xd8d84d(%rip), %rsi      ; "init"
+    0x10df58fa3 <+133>:  movq   %rax, %rdi
+    0x10df58fa6 <+136>:  callq  *%r14
+    0x10df58fa9 <+139>:  movq   %r15, -0x50(%rbp)
+    0x10df58fad <+143>:  movq   %rax, -0x58(%rbp)
+    0x10df58fb1 <+147>:  cmpl   $0x2, %r13d
+    0x10df58fb5 <+151>:  jl     0x10df59019               ; <+251>
+    0x10df58fb7 <+153>:  addq   $0x8, %rbx
+    0x10df58fbb <+157>:  decl   %r13d
+    0x10df58fbe <+160>:  leaq   0x8a9075(%rip), %r14      ; "-BuildDefaultPNG"
+    0x10df58fc5 <+167>:  leaq   0x8a907f(%rip), %r15      ; "-RegisterForSystemEvents"
+    0x10df58fcc <+174>:  movq   (%rbx), %r12
+    0x10df58fcf <+177>:  movq   %r12, %rdi
+    0x10df58fd2 <+180>:  movq   %r14, %rsi
+    0x10df58fd5 <+183>:  callq  0x10e72bcd8               ; symbol stub for: strcmp
+    0x10df58fda <+188>:  testl  %eax, %eax
+    0x10df58fdc <+190>:  je     0x10df59009               ; <+235>
+    0x10df58fde <+192>:  movq   %r12, %rdi
+    0x10df58fe1 <+195>:  movq   %r15, %rsi
+    0x10df58fe4 <+198>:  callq  0x10e72bcd8               ; symbol stub for: strcmp
+    0x10df58fe9 <+203>:  testl  %eax, %eax
+    0x10df58feb <+205>:  je     0x10df59000               ; <+226>
+    0x10df58fed <+207>:  movq   %r12, %rdi
+    0x10df58ff0 <+210>:  leaq   0x8a906d(%rip), %rsi      ; "--RegisterForSystemEvents"
+    0x10df58ff7 <+217>:  callq  0x10e72bcd8               ; symbol stub for: strcmp
+    0x10df58ffc <+222>:  testl  %eax, %eax
+    0x10df58ffe <+224>:  jne    0x10df59010               ; <+242>
+    0x10df59000 <+226>:  movb   $0x1, 0xdf656c(%rip)      ; __ShouldLaunchSafe
+    0x10df59007 <+233>:  jmp    0x10df59010               ; <+242>
+    0x10df59009 <+235>:  movb   $0x1, 0xdf6561(%rip)      ; __IsRunningTests
+    0x10df59010 <+242>:  addq   $0x8, %rbx
+    0x10df59014 <+246>:  decl   %r13d
+    0x10df59017 <+249>:  jne    0x10df58fcc               ; <+174>
+    0x10df59019 <+251>:  xorl   %eax, %eax
+    0x10df5901b <+253>:  callq  0x10e72a592               ; symbol stub for: BKSDisplayServicesStart
+    0x10df59020 <+258>:  callq  0x10df59d0b               ; UIApplicationInitialize
+    0x10df59025 <+263>:  movq   0xdb8d24(%rip), %rdi      ; (void *)0x000000010ed27c80: UIApplication
+    0x10df5902c <+270>:  movq   0xd8d39d(%rip), %rsi      ; "class"
+    0x10df59033 <+277>:  callq  *0xb4d057(%rip)           ; (void *)0x000000010d81f000: objc_msgSend
+    0x10df59039 <+283>:  movq   %rax, %r15
+    0x10df5903c <+286>:  movq   -0x50(%rbp), %rbx
+    0x10df59040 <+290>:  testq  %rbx, %rbx
+    0x10df59043 <+293>:  jne    0x10df59081               ; <+355>
+    0x10df59045 <+295>:  movq   0xdb8d34(%rip), %rdi      ; (void *)0x000000010d6b9e20: NSBundle
+    0x10df5904c <+302>:  movq   0xd8e0dd(%rip), %rsi      ; "mainBundle"
+    0x10df59053 <+309>:  movq   0xb4d036(%rip), %r14      ; (void *)0x000000010d81f000: objc_msgSend
+    0x10df5905a <+316>:  callq  *%r14
+    0x10df5905d <+319>:  movq   0xd8e0d4(%rip), %rsi      ; "infoDictionary"
+    0x10df59064 <+326>:  movq   %rax, %rdi
+    0x10df59067 <+329>:  callq  *%r14
+    0x10df5906a <+332>:  movq   0xd8d38f(%rip), %rsi      ; "objectForKey:"
+    0x10df59071 <+339>:  leaq   0xb8b4b8(%rip), %rdx      ; @"NSPrincipalClass"
+    0x10df59078 <+346>:  movq   %rax, %rdi
+    0x10df5907b <+349>:  callq  *%r14
+    0x10df5907e <+352>:  movq   %rax, %rbx
+    0x10df59081 <+355>:  movq   0xd8e0c0(%rip), %rsi      ; "length"
+    0x10df59088 <+362>:  movq   %rbx, %rdi
+    0x10df5908b <+365>:  callq  *0xb4cfff(%rip)           ; (void *)0x000000010d81f000: objc_msgSend
+    0x10df59091 <+371>:  testq  %rax, %rax
+    0x10df59094 <+374>:  movq   -0x48(%rbp), %r13
+    0x10df59098 <+378>:  je     0x10df59127               ; <+521>
+    0x10df5909e <+384>:  movq   %rbx, %rdi
+    0x10df590a1 <+387>:  callq  0x10e72a9ca               ; symbol stub for: NSClassFromString
+    0x10df590a6 <+392>:  movq   %rax, %r15
+    0x10df590a9 <+395>:  testq  %r15, %r15
+    0x10df590ac <+398>:  jne    0x10df59127               ; <+521>
+    0x10df590ae <+400>:  movq   0xdb8b33(%rip), %rdi      ; (void *)0x000000010d6ba500: NSAssertionHandler
+    0x10df590b5 <+407>:  movq   0xd8d47c(%rip), %rsi      ; "currentHandler"
+    0x10df590bc <+414>:  movq   0xb4cfcd(%rip), %r12      ; (void *)0x000000010d81f000: objc_msgSend
+    0x10df590c3 <+421>:  callq  *%r12
+    0x10df590c6 <+424>:  movq   %rax, -0x50(%rbp)
+    0x10df590ca <+428>:  movq   0xdb8b1f(%rip), %rdi      ; (void *)0x000000010d6bce90: NSString
+    0x10df590d1 <+435>:  movq   0xd8d468(%rip), %rsi      ; "stringWithUTF8String:"
+    0x10df590d8 <+442>:  leaq   0x8a8fb0(%rip), %rdx      ; "int UIApplicationMain(int, char **, NSString *, NSString *)"
+    0x10df590df <+449>:  callq  *%r12
+    0x10df590e2 <+452>:  movq   %rax, %r14
+    0x10df590e5 <+455>:  movq   0xdb8b04(%rip), %rdi      ; (void *)0x000000010d6bce90: NSString
+    0x10df590ec <+462>:  movq   0xd8d44d(%rip), %rsi      ; "stringWithUTF8String:"
+    0x10df590f3 <+469>:  leaq   0x8a868f(%rip), %rdx      ; "/SourceCache/UIKit_Sim/UIKit-3318.16.14/UIApplication.m"
+    0x10df590fa <+476>:  callq  *%r12
+    0x10df590fd <+479>:  movq   %rax, %rcx
+    0x10df59100 <+482>:  movq   0xd8e179(%rip), %rsi      ; "handleFailureInFunction:file:lineNumber:description:"
+    0x10df59107 <+489>:  movq   %rbx, (%rsp)
+    0x10df5910b <+493>:  leaq   0xb8b43e(%rip), %r9       ; @"Unable to instantiate the UIApplication subclass instance. No class named %@ is loaded."
+    0x10df59112 <+500>:  xorl   %r15d, %r15d
+    0x10df59115 <+503>:  movl   $0xb36, %r8d
+    0x10df5911b <+509>:  xorl   %eax, %eax
+    0x10df5911d <+511>:  movq   %r14, %rdx
+    0x10df59120 <+514>:  movq   -0x50(%rbp), %rdi
+    0x10df59124 <+518>:  callq  *%r12
+    0x10df59127 <+521>:  leaq   0x330(%rip), %rdi         ; _UIApplicationHandleEvent
+    0x10df5912e <+528>:  callq  0x10e72ad12               ; symbol stub for: GSEventRegisterEventCallBack
+    0x10df59133 <+533>:  leaq   0x8f1(%rip), %rdi         ; _UIApplicationHandleHIDEvent
+    0x10df5913a <+540>:  callq  0x10e72a5bc               ; symbol stub for: BKSHIDEventRegisterEventCallback
+    0x10df5913f <+545>:  movq   0xd8d28a(%rip), %rsi      ; "class"
+    0x10df59146 <+552>:  movq   0xb4cf43(%rip), %r12      ; (void *)0x000000010d81f000: objc_msgSend
+    0x10df5914d <+559>:  movq   %r15, %rdi
+    0x10df59150 <+562>:  callq  *%r12
+    0x10df59153 <+565>:  movq   0xd8e196(%rip), %rsi      ; "registerAsSystemApp"
+    0x10df5915a <+572>:  movq   %rax, %rdi
+    0x10df5915d <+575>:  callq  *%r12
+    0x10df59160 <+578>:  movb   %al, 0xdf640d(%rip)       ; __RegisterAsSystemApp
+    0x10df59166 <+584>:  cmpq   $-0x1, 0xdf0372(%rip)     ; __signalRunLoopSource + 7
+    0x10df5916e <+592>:  jne    0x10df59446               ; <+1320>
+    0x10df59174 <+598>:  cmpb   $0x0, 0xdf036d(%rip)      ; _UIApplicationIsExtension.once + 7
+    0x10df5917b <+605>:  je     0x10df59186               ; <+616>
+    0x10df5917d <+607>:  xorl   %eax, %eax
+    0x10df5917f <+609>:  callq  0x10e72acee               ; symbol stub for: GSEventInitializeAsExtension
+    0x10df59184 <+614>:  jmp    0x10df59192               ; <+628>
+    0x10df59186 <+616>:  movzbl 0xdf63e6(%rip), %edi      ; __RegisterAsSystemApp
+    0x10df5918d <+623>:  callq  0x10e72ace8               ; symbol stub for: GSEventInitialize
+    0x10df59192 <+628>:  movq   0xb4cca7(%rip), %rax      ; (void *)0x000000010dddb300: NSDefaultRunLoopMode
+    0x10df59199 <+635>:  movq   (%rax), %rdi
+    0x10df5919c <+638>:  callq  0x10e72ad06               ; symbol stub for: GSEventPushRunLoopMode
+    0x10df591a1 <+643>:  movq   0xd8e430(%rip), %rsi      ; "_startWindowServerIfNecessary"
+    0x10df591a8 <+650>:  movq   %r15, %rdi
+    0x10df591ab <+653>:  callq  *%r12
+    0x10df591ae <+656>:  movq   0xd8e42b(%rip), %rsi      ; "_startStatusBarServerIfNecessary"
+    0x10df591b5 <+663>:  movq   %r15, %rdi
+    0x10df591b8 <+666>:  callq  *%r12
+    0x10df591bb <+669>:  movq   %r15, %rdi
+    0x10df591be <+672>:  callq  0x10df58dd0               ; UIApplicationInstantiateSingleton
+    0x10df591c3 <+677>:  movq   0xdb8c56(%rip), %rdi      ; (void *)0x0000000110703498: FBSUIApplicationSystemService
+    0x10df591ca <+684>:  movq   0xd8d1c7(%rip), %rsi      ; "alloc"
+    0x10df591d1 <+691>:  callq  *%r12
+    0x10df591d4 <+694>:  movq   0xd8e40d(%rip), %rsi      ; "initWithQueue:"
+    0x10df591db <+701>:  movq   0xb4c7fe(%rip), %rdx      ; (void *)0x00000001100cc780: _dispatch_main_q
+    0x10df591e2 <+708>:  movq   %rax, %rdi
+    0x10df591e5 <+711>:  callq  *%r12
+    0x10df591e8 <+714>:  movq   %rax, 0xdf0319(%rip)      ; __systemAppService
+    0x10df591ef <+721>:  movq   0xdf6372(%rip), %rdx      ; UIApp
+    0x10df591f6 <+728>:  movq   0xd8d48b(%rip), %rsi      ; "setDelegate:"
+    0x10df591fd <+735>:  movq   %rax, %rdi
+    0x10df59200 <+738>:  callq  *%r12
+    0x10df59203 <+741>:  movq   0xdb8c1e(%rip), %rdi      ; (void *)0x0000000110703650: FBSUIApplicationWorkspace
+    0x10df5920a <+748>:  movq   0xd8d187(%rip), %rsi      ; "alloc"
+    0x10df59211 <+755>:  callq  *%r12
+    0x10df59214 <+758>:  movq   %rax, %r14
+    0x10df59217 <+761>:  movq   0xdb8c12(%rip), %rbx      ; (void *)0x0000000110704168: FBSSerialQueue
+    0x10df5921e <+768>:  movq   0xb4cc13(%rip), %rax      ; (void *)0x000000010dddb308: NSRunLoopCommonModes
+    0x10df59225 <+775>:  movq   (%rax), %rax
+    0x10df59228 <+778>:  movq   %rax, -0x40(%rbp)
+    0x10df5922c <+782>:  leaq   0xb8d9dd(%rip), %rax      ; @"UIInitializationRunLoopMode"
+    0x10df59233 <+789>:  movq   %rax, -0x38(%rbp)
+    0x10df59237 <+793>:  movq   0xdb897a(%rip), %rdi      ; (void *)0x000000010de14cd8: NSArray
+    0x10df5923e <+800>:  movq   0xd8d0fb(%rip), %rsi      ; "arrayWithObjects:count:"
+    0x10df59245 <+807>:  leaq   -0x40(%rbp), %rdx
+    0x10df59249 <+811>:  movl   $0x2, %ecx
+    0x10df5924e <+816>:  callq  *%r12
+    0x10df59251 <+819>:  movq   0xd8e398(%rip), %rsi      ; "queueWithMainRunLoopModes:"
+    0x10df59258 <+826>:  movq   %rbx, %rdi
+    0x10df5925b <+829>:  movq   %rax, %rdx
+    0x10df5925e <+832>:  callq  *%r12
+    0x10df59261 <+835>:  movq   0xd8e390(%rip), %rsi      ; "initWithSerialQueue:"
+    0x10df59268 <+842>:  movq   %r14, %rdi
+    0x10df5926b <+845>:  movq   %rax, %rdx
+    0x10df5926e <+848>:  callq  *%r12
+    0x10df59271 <+851>:  movq   %rax, 0xdf0238(%rip)      ; __workspace
+    0x10df59278 <+858>:  movq   0xdf62e9(%rip), %rdx      ; UIApp
+    0x10df5927f <+865>:  movq   0xd8d402(%rip), %rsi      ; "setDelegate:"
+    0x10df59286 <+872>:  movq   %rax, %rdi
+    0x10df59289 <+875>:  callq  *%r12
+    0x10df5928c <+878>:  movq   0xdb8965(%rip), %rdi      ; (void *)0x000000010ed2d540: UIDevice
+    0x10df59293 <+885>:  movq   0xd8d2d6(%rip), %rsi      ; "currentDevice"
+    0x10df5929a <+892>:  callq  *%r12
+    0x10df5929d <+895>:  movq   0xd8d2d4(%rip), %rsi      ; "userInterfaceIdiom"
+    0x10df592a4 <+902>:  movq   %rax, %rdi
+    0x10df592a7 <+905>:  callq  *%r12
+    0x10df592aa <+908>:  cmpq   $0x1, %rax
+    0x10df592ae <+912>:  jne    0x10df592c4               ; <+934>
+    0x10df592b0 <+914>:  movq   0xdb8af1(%rip), %rdi      ; (void *)0x000000010ed34250: UIClassicController
+    0x10df592b7 <+921>:  movq   0xd8e062(%rip), %rsi      ; "sharedClassicController"
+    0x10df592be <+928>:  callq  *0xb4cdcc(%rip)           ; (void *)0x000000010d81f000: objc_msgSend
+    0x10df592c4 <+934>:  testq  %r13, %r13
+    0x10df592c7 <+937>:  jne    0x10df59307               ; <+1001>
+    0x10df592c9 <+939>:  movq   0xdb8ab0(%rip), %rdi      ; (void *)0x000000010d6b9e20: NSBundle
+    0x10df592d0 <+946>:  movq   0xd8de59(%rip), %rsi      ; "mainBundle"
+    0x10df592d7 <+953>:  callq  *%r12
+    0x10df592da <+956>:  movq   0xd8de57(%rip), %rsi      ; "infoDictionary"
+    0x10df592e1 <+963>:  movq   %rax, %rdi
+    0x10df592e4 <+966>:  callq  *%r12
+    0x10df592e7 <+969>:  movq   0xd8d112(%rip), %rsi      ; "objectForKey:"
+    0x10df592ee <+976>:  leaq   0xb8b27b(%rip), %rdx      ; @"UIApplicationDelegateClass"
+    0x10df592f5 <+983>:  movq   %rax, %rdi
+    0x10df592f8 <+986>:  callq  *%r12
+    0x10df592fb <+989>:  movq   %rax, %r13
+    0x10df592fe <+992>:  testq  %r13, %r13
+    0x10df59301 <+995>:  je     0x10df59401               ; <+1251>
+    0x10df59307 <+1001>: movq   %r13, %rdi
+    0x10df5930a <+1004>: callq  0x10e72a9ca               ; symbol stub for: NSClassFromString
+    0x10df5930f <+1009>: movq   %rax, %r14
+    0x10df59312 <+1012>: testq  %r14, %r14
+    0x10df59315 <+1015>: jne    0x10df59384               ; <+1126>
+    0x10df59317 <+1017>: movq   0xdb88ca(%rip), %rdi      ; (void *)0x000000010d6ba500: NSAssertionHandler
+    0x10df5931e <+1024>: movq   0xd8d213(%rip), %rsi      ; "currentHandler"
+    0x10df59325 <+1031>: callq  *%r12
+    0x10df59328 <+1034>: movq   %rax, %r15
+    0x10df5932b <+1037>: movq   0xdb88be(%rip), %rdi      ; (void *)0x000000010d6bce90: NSString
+    0x10df59332 <+1044>: movq   0xd8d207(%rip), %rsi      ; "stringWithUTF8String:"
+    0x10df59339 <+1051>: leaq   0x8a8d4f(%rip), %rdx      ; "int UIApplicationMain(int, char **, NSString *, NSString *)"
+    0x10df59340 <+1058>: callq  *%r12
+    0x10df59343 <+1061>: movq   %rax, %rbx
+    0x10df59346 <+1064>: movq   0xdb88a3(%rip), %rdi      ; (void *)0x000000010d6bce90: NSString
+    0x10df5934d <+1071>: movq   0xd8d1ec(%rip), %rsi      ; "stringWithUTF8String:"
+    0x10df59354 <+1078>: leaq   0x8a842e(%rip), %rdx      ; "/SourceCache/UIKit_Sim/UIKit-3318.16.14/UIApplication.m"
+    0x10df5935b <+1085>: callq  *%r12
+    0x10df5935e <+1088>: movq   %rax, %rcx
+    0x10df59361 <+1091>: movq   0xd8df18(%rip), %rsi      ; "handleFailureInFunction:file:lineNumber:description:"
+    0x10df59368 <+1098>: movq   %r13, (%rsp)
+    0x10df5936c <+1102>: leaq   0xb8b21d(%rip), %r9       ; @"Unable to instantiate the UIApplication delegate instance. No class named %@ is loaded."
+    0x10df59373 <+1109>: movl   $0xb62, %r8d
+    0x10df59379 <+1115>: xorl   %eax, %eax
+    0x10df5937b <+1117>: movq   %rbx, %rdx
+    0x10df5937e <+1120>: movq   %r15, %rdi
+    0x10df59381 <+1123>: callq  *%r12
+    0x10df59384 <+1126>: movq   0xdb89c5(%rip), %rdi      ; (void *)0x000000010ed27c80: UIApplication
+    0x10df5938b <+1133>: movq   0xd8d03e(%rip), %rsi      ; "class"
+    0x10df59392 <+1140>: callq  *%r12
+    0x10df59395 <+1143>: movq   0xd8e264(%rip), %rsi      ; "isSubclassOfClass:"
+    0x10df5939c <+1150>: movq   %r14, %rdi
+    0x10df5939f <+1153>: movq   %rax, %rdx
+    0x10df593a2 <+1156>: callq  *%r12
+    0x10df593a5 <+1159>: movq   0xdf61bc(%rip), %rbx      ; UIApp
+    0x10df593ac <+1166>: testb  %al, %al
+    0x10df593ae <+1168>: je     0x10df593c5               ; <+1191>
+    0x10df593b0 <+1170>: movq   0xd8d2d1(%rip), %rsi      ; "setDelegate:"
+    0x10df593b7 <+1177>: movq   %rbx, %rdi
+    0x10df593ba <+1180>: movq   %rbx, %rdx
+    0x10df593bd <+1183>: callq  *0xb4cccd(%rip)           ; (void *)0x000000010d81f000: objc_msgSend
+    0x10df593c3 <+1189>: jmp    0x10df59401               ; <+1251>
+    0x10df593c5 <+1191>: movq   0xd8cfcc(%rip), %rsi      ; "alloc"
+    0x10df593cc <+1198>: movq   %r14, %rdi
+    0x10df593cf <+1201>: callq  *%r12
+    0x10df593d2 <+1204>: movq   0xd8d417(%rip), %rsi      ; "init"
+    0x10df593d9 <+1211>: movq   %rax, %rdi
+    0x10df593dc <+1214>: callq  *%r12
+    0x10df593df <+1217>: movq   0xd8d4d2(%rip), %rsi      ; "autorelease"
+    0x10df593e6 <+1224>: movq   %rax, %rdi
+    0x10df593e9 <+1227>: callq  *%r12
+    0x10df593ec <+1230>: movq   0xd8e215(%rip), %rsi      ; "_setDelegate:assumeOwnership:"
+    0x10df593f3 <+1237>: movl   $0x1, %ecx
+    0x10df593f8 <+1242>: movq   %rbx, %rdi
+    0x10df593fb <+1245>: movq   %rax, %rdx
+    0x10df593fe <+1248>: callq  *%r12
+    0x10df59401 <+1251>: movq   0xd8cf78(%rip), %rsi      ; "release"
+    0x10df59408 <+1258>: movq   -0x58(%rbp), %rdi
+    0x10df5940c <+1262>: callq  *%r12
+    0x10df5940f <+1265>: movq   0xdf6152(%rip), %rdi      ; UIApp
+    0x10df59416 <+1272>: movq   0xd8e1f3(%rip), %rsi      ; "_run"
+    0x10df5941d <+1279>: callq  *%r12
+    0x10df59420 <+1282>: movq   0xb4c5a9(%rip), %rax      ; (void *)0x00000001101d2070: __stack_chk_guard
+    0x10df59427 <+1289>: movq   (%rax), %rax
+    0x10df5942a <+1292>: cmpq   -0x30(%rbp), %rax
+    0x10df5942e <+1296>: jne    0x10df59441               ; <+1315>
+    0x10df59430 <+1298>: xorl   %eax, %eax
+    0x10df59432 <+1300>: addq   $0x38, %rsp
+    0x10df59436 <+1304>: popq   %rbx
+    0x10df59437 <+1305>: popq   %r12
+    0x10df59439 <+1307>: popq   %r13
+    0x10df5943b <+1309>: popq   %r14
+    0x10df5943d <+1311>: popq   %r15
+    0x10df5943f <+1313>: popq   %rbp
+    0x10df59440 <+1314>: retq   
+    0x10df59441 <+1315>: callq  0x10e72b936               ; symbol stub for: __stack_chk_fail
+    0x10df59446 <+1320>: leaq   0xdf0093(%rip), %rdi      ; _UIApplicationIsExtension.once
+    0x10df5944d <+1327>: leaq   0xb4f57c(%rip), %rsi      ; __block_literal_global616
+    0x10df59454 <+1334>: callq  0x10e72b9e4               ; symbol stub for: dispatch_once
+    0x10df59459 <+1339>: jmp    0x10df59174               ; <+598>
